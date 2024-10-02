@@ -39,40 +39,14 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
+    height: 100%;
     background-color: #619297;
     padding: 0px 2px;
     box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 }
 
 
-  id {
-    display: flex;
-    justify-content: space-between;
-    position:fixed;
-    flex-direction: row;
-    background-color: #fff;
-    border-radius: 3px;
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    width: 100%; /* Span across the full width */
-    background-color: #619297; /* Optional: background color to match the page or stand out */
-    padding: 5px 10px; /* Optional: add some padding */
-    box-shadow: 0 2px 500px rgba(0,0,0,0.2); /* Optional: add a slight shadow for depth */
-  }
 
-  span {
-    display: flex;
-    position: center;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    background-color: #619297;
-    padding: 0px 2px;
-    box-shadow: 0 3px 5px rgba(0,0,2,0.2);
-    transition: background-color 0.3s ease;
-    border-radius: 20px;
-}
 
 
 
