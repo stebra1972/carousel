@@ -1,40 +1,24 @@
 import './styles.css';
 
-// Assuming you have an assets folder with photos named photo1.jpg, photo2.jpg, etc.
-const photos = ['photo1.jpeg','assets/photo2.jpg','assets/photo3.jpg'];
+const images = ['image1.jpg', 'image2.jpg', 'image3.jpg']; // Add more image names as needed
+const imagesWrapper = document.getElementById('imagesWrapper');
 let currentIndex = 0;
 
-// Create elements
-const carouselContainer = document.createElement('div');
-const leftArrow = document.createElement('button');
-const rightArrow = document.createElement('button');
-const photoDisplay = document.createElement('img');
-
-// Set attributes and text content
-leftArrow.textContent = '<';
-rightArrow.textContent = '>';
-photoDisplay.src = photos[currentIndex]; // Load the initial photo
-
-// Append elements to the carousel container
-carouselContainer.appendChild(leftArrow);
-carouselContainer.appendChild(photoDisplay);
-carouselContainer.appendChild(rightArrow);
-
-// Append the carousel to the document body
-document.body.appendChild(carouselContainer);
-
-// Function to update the photo display
-function updatePhoto() {
-    photoDisplay.src = photos[currentIndex];
+// Function to display the current image
+function displayImage(index) {
+  imagesWrapper.innerHTML = `<img src="assets/${images[index]}" style="width: 100%;">`;
 }
 
-// Event listeners for arrows
-leftArrow.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + photos.length) % photos.length; // Wrap to the last photo if at the beginning
-    updatePhoto();
+// Initial display
+displayImage(currentIndex);
+
+// Navigation
+document.getElementById('leftArrow').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  displayImage(currentIndex);
 });
 
-rightArrow.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % photos.length; // Wrap to the first photo if at the end
-    updatePhoto();
+document.getElementById('rightArrow').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % images.length;
+  displayImage(currentIndex);
 });

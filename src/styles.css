@@ -1,61 +1,35 @@
 
 
 /* Page Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #a3dbdb;
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  /* Button Styles */
-  button {
-    background-color: #0a7bf4;
-    color: rgb(16, 2, 2);
-    padding: 10px 20px;
-    margin: 0 2px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-
-
-
-
-  
-  button:hover {
-    background-color: #0056b3;
-
-  }
-  
-  div {
-    display: flex;
-    justify-content: space-between;; /* Modifica qui per allineare i contenuti a sinistra */
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
-    background-color: #619297;
-    padding: 0px 2px;
-    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+#carouselContainer {
+  position: relative;
+  width: 600px; /* Adjust as needed */
+  margin: auto;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: blue;
 }
 
+#imagesWrapper img {
+  width: 100%; /* Ensure images fit the container */
+}
 
+#leftArrow, #rightArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ee6d6d;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 5px;
+}
 
+#leftArrow {
+  left: 10px;
+}
 
-
-
-
-  
-
-
- 
-  
-  
-
-
+#rightArrow {
+  right: 10px;
+}
